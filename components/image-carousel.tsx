@@ -91,13 +91,13 @@ export default function ImageCarousel({ images, autoPlayInterval = 4000, classNa
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      <div className="relative overflow-hidden rounded-lg bg-gray-100">
+      <div className="relative overflow-hidden rounded-lg bg-white-100">
         {/* Stack all images and use opacity for fade effect */}
         <div className="relative aspect-[4/3]">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              className={`absolute inset-0 transition-opacity duration-2000 ease-in-out ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}
             >
