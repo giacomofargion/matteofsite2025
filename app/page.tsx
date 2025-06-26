@@ -75,7 +75,7 @@ export default function Home() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="mb-6 md:mb-8"
       >
-        <ImageCarousel images={carouselImages} autoPlayInterval={8000} className="max-w-2xl mx-auto" />
+        <ImageCarousel images={carouselImages} autoPlayInterval={10000} className="max-w-2xl mx-auto" />
       </motion.div>
 
       <motion.div
