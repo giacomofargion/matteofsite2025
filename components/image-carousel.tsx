@@ -97,7 +97,7 @@ export default function ImageCarousel({ images, autoPlayInterval = 4000, classNa
           {images.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-2000 ease-in-out ${
+              className={`absolute inset-0 transition-opacity duration-4000 ease-in-out ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}
             >
