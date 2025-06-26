@@ -39,10 +39,6 @@ export default function ImageCarousel({ images, autoPlayInterval = 4000, classNa
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
   }
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index)
-  }
-
   const handleMouseEnter = () => {
     setIsAutoPlaying(false)
   }
@@ -97,7 +93,7 @@ export default function ImageCarousel({ images, autoPlayInterval = 4000, classNa
           {images.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-4000 ease-in-out ${
+              className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -139,22 +135,6 @@ export default function ImageCarousel({ images, autoPlayInterval = 4000, classNa
           </div>
         )}
       </div>
-
-      {/* Dots indicator */}
-      {images.length > 1 && (
-        <div className="flex justify-center mt-4 space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                index === currentIndex ? "bg-gray-600" : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   )
 }
