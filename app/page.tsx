@@ -54,9 +54,17 @@ export default function Home() {
       src: "/images/scores/irrlicht.jpg",
       alt: "Musical score - Composition 9 ",
     },
-                {
+     {
       src: "/images/scores/cage.jpg",
       alt: "Musical score - Composition 10 ",
+    },
+ {
+      src: "/images/scores/three-trumpets.jpg",
+      alt: "Musical score - Composition 11 ",
+    },
+     {
+      src: "/images/scores/songbook10.jpg",
+      alt: "Musical score - Composition 12 ",
     },
   ]
 
@@ -91,12 +99,12 @@ export default function Home() {
           write for concerts, theatre and dance performances. Uniquely he began not only to accompany the dance with his
           music but to become part of it, preempting and influencing a new generation of composers drawn to performance
           work. Fargion continues to tour and teach widely with Burrows, developing new forms of performance
-          collaboration including the year-long online project <em>52 Portraits</em>
-          which has attracted 60,000 visitors since 2016, the rock band series <em>'Music For Lectures'</em> (2018-),
+          collaboration including the year-long online project <em>52 Portraits</em> {" "}
+          which has attracted 60,000 visitors since 2016, the rock band series <em>'Music For Lectures'</em> (2018),
           and the London Contemporary Music Festival commission for dancer, singing pianist and orchestra{" "}
-          <em>Let us stop this mad rush towards the end</em>
+          <em>Let us stop this mad rush towards the end</em>{" "}
           (2019). He is also creating and performing with acclaimed Norwegian artist Mette Edvardsen,{" "}
-          <em>Penelope Sleeps</em> 2019.
+          <em>Penelope Sleeps</em> 2019 and <em>oslo</em> 2017 as well as collaborating with Claire Croizé, Karl Jay-Lewin and Andrea Spreafico. His pioneering composition workshops for dancers have become legendary, further blurring the boundaries between music and dance.
         </p>
       </motion.div>
     </motion.div>

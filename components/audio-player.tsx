@@ -29,7 +29,41 @@ class AudioManager {
         this.currentSetIsPlaying(false)
       }
     }
-    
+
+    this.currentPlayer = audio
+    this.currentSetIsPlaying = setIsPlaying
+  }
+
+  clearCurrentPlayer(audio: HTMLAudioElement) {
+    if (this.currentPlayer === audio) {
+      this.currentPlayer = null
+      this.currentSetIsPlaying = null
+    }
+  }
+}
+
+// Global audio manager to handle single playback
+class AudioManager {
+  private static instance: AudioManager
+  private currentPlayer: HTMLAudioElement | null = null
+  private currentSetIsPlaying: ((playing: boolean) => void) | null = null
+
+  static getInstance(): AudioManager {
+    if (!AudioManager.instance) {
+      AudioManager.instance = new AudioManager()
+    }
+    return AudioManager.instance
+  }
+
+  setCurrentPlayer(audio: HTMLAudioElement, setIsPlaying: (playing: boolean) => void) {
+    // Pause the previous player if it exists
+    if (this.currentPlayer && this.currentPlayer !== audio) {
+      this.currentPlayer.pause()
+      if (this.currentSetIsPlaying) {
+        this.currentSetIsPlaying(false)
+      }
+    }
+
     this.currentPlayer = audio
     this.currentSetIsPlaying = setIsPlaying
   }
@@ -82,7 +116,7 @@ export default function AudioPlayer({ src, title }: AudioPlayerProps) {
     } else {
       // Set this as the current player (will pause others)
       audioManager.setCurrentPlayer(audio, setIsPlaying)
-      
+
       setIsLoading(true)
       audio
         .play()

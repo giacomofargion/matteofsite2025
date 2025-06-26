@@ -226,7 +226,6 @@ export default function ListOfWorks() {
           details: "Piano and voice, dancer [15']",
           description:
             "Conceived and directed by Burrows&Fargion. Performance/ installation commissioned by the Art-Music-Dance Staging for the Derrida de Moroda Archive exhibition, Museum der Moderne, Salzburg. Choreographed and performed by Claire Godsmark, music by Matteo Fargion. Film By Hugo Glendinning",
-          link: "https://vimeo.com/156835094",
         },
       ],
     },
